@@ -1,51 +1,50 @@
 <?php  
 
 /*TRi bulle php*/
-
-
-$tri_bulle = array('emp1 ' => '12 ' , // on declare notre tableau
-				   'emp2 ' => '54 ' ,
-				   'emp3 ' => '34 ' ,
-				   'emp5 ' => '18 ' ,
-				   'emp6 ' => '24 ' ,
-				   'emp7 ' => '78 ' ,
-				   'emp8 ' => '36 ' ,
-				   'emp9 ' => '59 ' ,
-				   'emp10 ' => '62 ' );
+$tri_bulle = array(10,25,23,65,89,65,9,89,98,4);
 				  					
 					
 
 
 /*sort($tri_bulle); // ici la fonction sort() tri notre tableau*/
 
-if()
+
+	for($key = 0 ; $key<10 ; $key++){
+ 		for($j = 0 ; $j < 9; $j++){ 
+	 		if($tri_bulle[$j]>$tri_bulle[$j+1]){
+	 			$temp = $tri_bulle[$j+1];
+	 			$tri_bulle[$j+1] = $tri_bulle[$j];
+	 			$tri_bulle[$j] = $temp;
 
 
-foreach ($tri_bulle as $key => $value){ // ici on parcour notre tableau apres tri
- 	/*for($key=0;$key<10;$key++)*/
- 	echo $value ; // et on laffiche
+ 	 
+ 	 			//echo $value ; // et on laffiche;
+ 			}
  		
- 	}	
- 
- 
+ 		}
+ 	
+ 	}
+ 	print_r($tri_bulle);
+
+
 
 ?>
 
 
 
-<?php 
-//tri par insertion
+<!--<?php 
+/*tri par insertion
 
-$tri_bulle = array(12,15,65,5,61,54,8,3,5,45);
-
-
+$tri_insert = array(12,15,65,5,61,54,8,3,5,45);
 
 
-foreach ($tri_bulle as $key => $value){ // ici on parcour notre tableau apres tri
- 	/*for($key=0;$key<10;$key++)*/
+
+
+foreach ($tri_bulle as $key => $value){  ici on parcour notre tableau apres tri
+ 	/*for($key=0;$key<10;$key++)
  	echo $value ; // et on laffiche
  		
  	}	
 
 
-?>
+?>*/
